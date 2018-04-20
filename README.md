@@ -8,7 +8,7 @@ The actual engine is under AIEngine.
 # api
 * [Setup](#Setup)
 * [Training](#Training)
-* [save AI](#save AI)
+* [save AI](#saveAI)
 * [info](#info)
 
 # Setup
@@ -41,7 +41,7 @@ The actual engine is under AIEngine.
 			
 			.nextGenerationStep();
 			
-# save AI
+# saveAI
 
 * saveAI
 
