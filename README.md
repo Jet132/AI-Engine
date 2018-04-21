@@ -1,6 +1,9 @@
 # AI-Engine
 AI Engine for neural networks with evolutionary training
 
+# attention!!
+for normal java version please also use the commented one, there was a rater big bug in the uncommented one
+
 # Example
 It has en build in example.
 The actual engine is under AIEngine.
