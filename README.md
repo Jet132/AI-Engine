@@ -1,8 +1,9 @@
 # AI-Engine
 AI Engine for neural networks with evolutionary training
+
 there is a java and c# version
-java fully tested
-c# version in beta because i didn't test it
+* java fully tested
+* C# version in beta because i didn't test it
 
 # Example
 It has en build in example.
