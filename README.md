@@ -5,6 +5,9 @@ there is a java and c# version
 * java fully tested
 * C# version in beta because i didn't test it
 
+# ATTENTION
+in the Java version don't use the gpu version
+
 # Example
 It has en build in example.
 The actual engine is under AIEngine.
