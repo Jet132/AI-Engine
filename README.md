@@ -2,8 +2,7 @@
 AI Engine for neural networks with evolutionary training
 
 # Example
-It has en build in example.
-The actual engine is under AIEngine.
+The black rectangle needs to eat the green food
 
 # api
 * [Setup](#Setup)
@@ -13,16 +12,18 @@ The actual engine is under AIEngine.
 
 # Setup
 
-	.setupEngine(boolean menu, int InputNumber, int[] hidden, int OutputNumber, int AINumber, int Generationsteps, int MutationRate);
+	.setupEngine(int[] layout, int AINumber, int Generationsteps, int MutationRate, boolean cuda);
 
-* menu should allways be false
-* hidden should be an array with the neurons in each hiddenlayer
+* layout describes the NN. for example:
 
-			for example {2,3} makes two hidden layers
-			the first one with 2 neurons
-			the second one with3
+		{2,2,2} means 
+		NN has 2 inputs
+		2 hidden neurons in one layer
+		2 outputs
 			
 * Generationsteps is the Amount of times it makes a generation before actually making children, so no AI can get to the next generation by luck
+
+* If cuda is true the NN will run on your Nvidia GPU. Note: for small NNs CPU is recommended
 
 # Training
 * setInput
