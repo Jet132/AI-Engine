@@ -29,7 +29,7 @@ The black rectangle needs to eat the green food
 * setInput
 
 			.setInput(int Input, double Value, int AI);
-* runEngine
+* runNN
 
 			.runEngine(int AI);
 * getOutput(returns double)
