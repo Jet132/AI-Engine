@@ -17,5 +17,6 @@
 	<classpathentry kind="lib" path="JCuda-All-0.8.0-bin-windows-x86_64/jcusparse-natives-0.8.0-windows-x86_64.jar"/>
 	<classpathentry kind="lib" path="JCuda-All-0.8.0-bin-windows-x86_64/jnvgraph-0.8.0.jar"/>
 	<classpathentry kind="lib" path="JCuda-All-0.8.0-bin-windows-x86_64/jnvgraph-natives-0.8.0-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="AI-Engine 6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

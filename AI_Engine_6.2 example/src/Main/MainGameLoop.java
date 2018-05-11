@@ -19,7 +19,7 @@ public class MainGameLoop {
 	public static Label lbl1;
 	public static int speed = 1;
 	public static int temp = 0;
-	public static int AIs = 20000;
+	public static int AIs = 500;
 	public static int gridSize = 16;
 	public static int player[][] = new int[AIs][2];
 	public static int food[][] = new int[AIs][2];
@@ -34,7 +34,7 @@ public class MainGameLoop {
 	public static void main(String[] args) {
 		
 		AI = new AIEngine();
-		AI.setupEngine(new int[] {2,1000,2}, AIs, 6, 50, false);
+		AI.setupEngine(new int[] {2,2,2}, AIs, 6, 50, true);
 		for (int i = 0; i < AIs; i++) {
 			player[i][0] = random.nextInt(gridSize);
 			player[i][1] = random.nextInt(gridSize);
