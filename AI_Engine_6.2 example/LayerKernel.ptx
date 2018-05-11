@@ -24,7 +24,7 @@
 	.reg .pred 	%p<10>;
 	.reg .f32 	%f<51>;
 	.reg .b32 	%r<34>;
-	.reg .f64 	%fd<6>;
+	.reg .f64 	%fd<8>;
 	.reg .b64 	%rd<33>;
 
 
@@ -147,10 +147,12 @@ BB0_11:
 	setp.lt.f32	%p9, %f32, 0fC2D20000;
 	cvt.f64.f32	%fd1, %f44;
 	add.f64 	%fd2, %fd1, 0d3FF0000000000000;
-	rcp.rn.f64 	%fd3, %fd2;
-	selp.f64	%fd4, 0d3FF0000000000000, %fd3, %p8;
-	selp.f64	%fd5, 0d0000000000000000, %fd4, %p9;
-	cvt.rn.f32.f64	%f45, %fd5;
+	mov.f64 	%fd3, 0d4000000000000000;
+	div.rn.f64 	%fd4, %fd3, %fd2;
+	add.f64 	%fd5, %fd4, 0dBFF0000000000000;
+	selp.f64	%fd6, 0d3FF0000000000000, %fd5, %p8;
+	selp.f64	%fd7, 0dBFF0000000000000, %fd6, %p9;
+	cvt.rn.f32.f64	%f45, %fd7;
 	add.s64 	%rd31, %rd27, %rd29;
 	st.global.f32 	[%rd31], %f45;
 
