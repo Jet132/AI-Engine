@@ -19,7 +19,7 @@ public class MainGameLoop {
 	public static Label lbl1;
 	public static int speed = 1;
 	public static int temp = 0;
-	public static int AIs = 500;
+	public static int AIs = 1000;
 	public static int gridSize = 16;
 	public static int player[][] = new int[AIs][2];
 	public static int food[][] = new int[AIs][2];
@@ -65,7 +65,7 @@ public class MainGameLoop {
 			AI.setInput(5, food[i][1], i);*/
 			
 			
-			AI.runEngine(i);
+			AI.runNN(i);
 
 			if (AI.getOutput(0, i) < 0) {
 				if (player[i][0] > 0) {
