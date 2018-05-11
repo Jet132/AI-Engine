@@ -33,7 +33,7 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 * setInput
 
 			.setInput(int Input, double Value, int AI);
-* runEngine
+* runNN
 
 			.runEngine(int AI);
 * getOutput(returns double)
