@@ -34,7 +34,7 @@ The black rectangle needs to eat the green food
 			.runNN(int AI);
 * runNN with multithreading
 
-			.runAllNNs
+			.runAllNNs();
 * getOutput(returns double)
 
 			.getOutput(int Output, int AI)
