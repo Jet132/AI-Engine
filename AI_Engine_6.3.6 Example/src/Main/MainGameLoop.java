@@ -34,7 +34,7 @@ public class MainGameLoop {
 	public static void main(String[] args) {
 		
 		AI = new AIEngine();
-		AI.setupEngine(new int[] {2,2,2}, AIs, 6, 50, true);
+		AI.setupEngine(new int[] {2,2,2}, AIs, 6, 20, false);
 		for (int i = 0; i < AIs; i++) {
 			player[i][0] = random.nextInt(gridSize);
 			player[i][1] = random.nextInt(gridSize);
@@ -59,14 +59,9 @@ public class MainGameLoop {
 		for (int i = 0; i < AIs; i++) {
 			AI.setInput(0, player[i][0]-food[i][0], i);
 			AI.setInput(1, player[i][1]-food[i][1], i);
-			/*AI.setInput(2, player[i][0], i);
-			AI.setInput(3, player[i][1], i);
-			AI.setInput(4, food[i][0], i);
-			AI.setInput(5, food[i][1], i);*/
 			
-			
-			AI.runNN(i);
-
+		AI.runNN(i);
+		
 			if (AI.getOutput(0, i) < 0) {
 				if (player[i][0] > 0) {
 					player[i][0]--;
@@ -93,6 +88,7 @@ public class MainGameLoop {
 				food[i][1] = random.nextInt(gridSize);
 			}
 		}
+		
 		if (temp > 50) {
 			for (int i = 0; i < AIs; i++) {
 				AI.setScore(points[i]+food_distance(i), i);
