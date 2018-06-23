@@ -2,7 +2,7 @@
 AI Engine for neural networks with evolutionary training
 
 # Example
-The black rectangle needs to eat the green food
+The black rectangle needs to eat the green food and avoid the red enemies
 
 # api
 * [Setup](#Setup)
@@ -38,9 +38,9 @@ The black rectangle needs to eat the green food
 * getOutput(returns double)
 
 			.getOutput(int Output, int AI)
-* setScore
+* setFitness
 
-			.setScore(float Score, int AI);
+			.setFitness(float Score, int AI);
 * nextGenerationStep
 			
 			.nextGenerationStep();
