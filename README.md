@@ -6,7 +6,7 @@ there is a java and c# version
 * C# version in beta because i didn't test it
 
 # Example
-The Java version has an Example, where the black rectangle needs to eat the green food
+The Java version has an Example, where the black rectangle needs to eat the green food and avoid the red enemies
 
 # api
 * [Setup](#Setup)
@@ -42,12 +42,12 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 * getOutput(returns double)
 
 			.getOutput(int Output, int AI)
-* setScore
+* setFitness
 
-			.setScore(float Score, int AI);
-* nextGenerationStep
+			.setFitness(float Score, int AI);
+* nextGenerationstep
 			
-			.nextGenerationStep();
+			.nextGenerationstep();
 			
 # saveAI
 
