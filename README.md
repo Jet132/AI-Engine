@@ -1,5 +1,5 @@
 # AI-Engine
-AI Engine for neural networks with evolutionary training
+AI Engine for neural networks with evolutionary training. You will need to install the apache common math library (see in the example) and it can run on Nvidia GPUs if you install the JCuda library (see in the example).
 
 # Example
 The black rectangle needs to eat the green food and avoid the red enemies
