@@ -41,9 +41,9 @@ The black rectangle needs to eat the green food and avoid the red enemies
 * setFitness
 
 			.setFitness(float Score, int AI);
-* nextGenerationStep
+* nextGenerationstep
 			
-			.nextGenerationStep();
+			.nextGenerationstep();
 			
 # saveAI
 
