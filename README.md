@@ -3,7 +3,7 @@ AI Engine for neural networks with evolutionary training
 
 there is a java and c# version
 * java fully tested (needs "Apache common math" for CPU and "JCuda" for GPU)
-* C# version in beta because i didn't test it
+* C# version in beta because i didn't test it (and is based on a really old Java version of this engine)
 
 # Example
 The Java version has an Example, where the black rectangle needs to eat the green food and avoid the red enemies
