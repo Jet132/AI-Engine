@@ -1,18 +1,15 @@
-# AI-Engine
+# JNN
 AI Engine for neural networks with evolutionary training. You will need to install the apache common math library (see in the example) and it can run on Nvidia GPUs if you install the JCuda library (see in the example).
-
-# Example
-The black rectangle needs to eat the green food and avoid the red enemies
 
 # api
 * [Setup](#Setup)
 * [Training](#Training)
-* [save AI](#saveAI)
+* [save NN](#save NN)
 * [info](#info)
 
 # Setup
 
-	.setupEngine(int[] layout, int AINumber, int Generationsteps, int MutationRate, boolean cuda);
+	.setup(int[] layout, int AgentCount, int Generationsteps, int MutationRate, boolean cuda);
 
 * layout describes the NN. for example:
 
@@ -26,46 +23,46 @@ The black rectangle needs to eat the green food and avoid the red enemies
 * If cuda is true the NN will run on your Nvidia GPU. Note: for small NNs CPU is recommended
 
 # Training
-* setInput
+* set Input
 
-			.setInput(int Input, double Value, int AI);
-* runNN
+			.setInput(int Input, double Value, int Agent);
+* run Agent
 
-			.runNN(int AI);
-* runNN with multithreading
+			.runAgent(int Agent);
+* run Agent with multithreading
 
-			.runAllNNs();
-* getOutput(returns double)
+			.runAllAgents();
+* get Output (returns double)
 
-			.getOutput(int Output, int AI)
-* setFitness
+			.getOutput(int Output, int Agent)
+* set Fitness
 
-			.setFitness(float Score, int AI);
-* nextGenerationstep
+			.setFitness(float Fitness, int Agent);
+* next Generationstep
 			
 			.nextGenerationstep();
 			
-# saveAI
+# save NN
 
-* saveAI
+* save NN
 
-			.saveAI(int AI);
+			.saveNN(int Agent);
 			
-* saveBestAI
+* save best NN
 
-			.saveAI(AIEngine.getAINumberPerScoreList(0));
+			.saveNN(JNN.getAgentIDPerFitnessList(0));
 			
 # info
 
-* getGeneration(returns int)
+* get Generation (returns int)
 
 			.getGeneration()
-* getGenerationStep(returns int)
+* get Generationstep (returns int)
 
-			.getGenerationStep()
-* getScorelist(returns float)
+			.getGenerationstep()
+* get Fitness(returns float)
 
-			.getAIScorePerScoreList(int Number)
-* getAIIDforScorelist(returns int)
+			.getAgentFitnessPerFitnessList(int Number)
+* get Agent ID orderd with Fitness (returns int)
 
-			.getAINumberPerScoreList(int Number)
+			.getAgentIDPerFitnessList(int Number)
