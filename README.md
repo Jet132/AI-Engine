@@ -1,5 +1,5 @@
 # JNN
-AI Engine for neural networks with evolutionary training
+Java Library for neural networks with evolutionary training
 
 there is a java and c# version
 * java fully tested (needs "Apache common math" for CPU and "JCuda" for Nvidia GPU)
@@ -11,7 +11,7 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 # api
 * [Setup](#Setup)
 * [Training](#Training)
-* [save AI](#saveAI)
+* [save NN](#saveNN)
 * [info](#info)
 
 # Setup
@@ -30,46 +30,46 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 * If cuda is true the NN will run on your Nvidia GPU. Note: for small NNs CPU is recommended
 
 # Training
-* setInput
+* set Input
 
 			.setInput(int Input, double Value, int Agent);
-* runNN
+* run Agent
 
 			.runAgent(int Agent);
-* runNN with multithreading
+* run Agent with multithreading
 
 			.runAllAgents();
-* getOutput(returns double)
+* get Output (returns double)
 
 			.getOutput(int Output, int Agent)
-* setFitness
+* set Fitness
 
 			.setFitness(float Fitness, int Agent);
-* nextGenerationstep
+* next Generationstep
 			
 			.nextGenerationstep();
 			
-# saveAI
+# saveNN
 
-* saveAI
+* save NN
 
 			.saveNN(int Agent);
 			
-* saveBestAI
+* save best NN
 
 			.saveNN(JNN.getAgentIDPerFitnessList(0));
 			
 # info
 
-* getGeneration(returns int)
+* get Generation (returns int)
 
 			.getGeneration()
-* getGenerationStep(returns int)
+* get Generationstep (returns int)
 
-			.getGenerationStep()
-* getScorelist(returns float)
+			.getGenerationstep()
+* get Fitness(returns float)
 
 			.getAgentFitnessPerFitnessList(int Number)
-* getAIIDforScorelist(returns int)
+* get Agent ID orderd with Fitness (returns int)
 
 			.getAgentIDPerFitnessList(int Number)
