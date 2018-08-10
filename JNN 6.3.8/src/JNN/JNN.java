@@ -55,11 +55,11 @@ public class JNN {
 		}
 	}
 
-	public static void saveAI(int AI) {
+	public static void saveNN(int Agent) {
 		if (cuda) {
-			((GPUDataManager) DataManager).saveAI(AI);
+			((GPUDataManager) DataManager).saveAI(Agent);
 		} else {
-			((CPUDataManager) DataManager).saveAI(AI);
+			((CPUDataManager) DataManager).saveAI(Agent);
 		}
 	}
 
@@ -106,11 +106,11 @@ public class JNN {
 		}
 	}
 
-	public static void setInput(int Input, double Value, int AI) {
+	public static void setInput(int Input, double Value, int Agent) {
 		if (cuda) {
-			((GPUAgent) Agents[AI]).setInput(Input, (float) Value);
+			((GPUAgent) Agents[Agent]).setInput(Input, (float) Value);
 		} else {
-			((CPUAgent) Agents[AI]).setInput(Input, Value);
+			((CPUAgent) Agents[Agent]).setInput(Input, Value);
 		}
 	}
 
@@ -151,11 +151,11 @@ public class JNN {
 		}
 	}
 
-	public static void setFitness(float Score, int Agent) {
+	public static void setFitness(float Fitness, int Agent) {
 		if (cuda) {
-			((GPUAgent) Agents[Agent]).setScore(Score);
+			((GPUAgent) Agents[Agent]).setScore(Fitness);
 		} else {
-			((CPUAgent) Agents[Agent]).setScore(Score);
+			((CPUAgent) Agents[Agent]).setScore(Fitness);
 		}
 	}
 
