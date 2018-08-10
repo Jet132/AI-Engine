@@ -1,9 +1,9 @@
-# AI-Engine
+# JNN
 AI Engine for neural networks with evolutionary training
 
 there is a java and c# version
-* java fully tested (needs "Apache common math" for CPU and "JCuda" for GPU)
-* C# version in beta because i didn't test it (and is based on a really old Java version of this engine)
+* java fully tested (needs "Apache common math" for CPU and "JCuda" for Nvidia GPU)
+* C# version in beta because i didn't test it (and is based on a really old Java version of this lib)
 
 # Example
 The Java version has an Example, where the black rectangle needs to eat the green food and avoid the red enemies
@@ -16,7 +16,7 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 
 # Setup
 
-	.setupEngine(int[] layout, int AINumber, int Generationsteps, int MutationRate, boolean cuda);
+	.setup(int[] layout, int AgentCount, int Generationsteps, int MutationRate, boolean cuda);
 
 * layout describes the NN. for example:
 
@@ -32,19 +32,19 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 # Training
 * setInput
 
-			.setInput(int Input, double Value, int AI);
+			.setInput(int Input, double Value, int Agent);
 * runNN
 
-			.runNN(int AI);
+			.runAgent(int Agent);
 * runNN with multithreading
 
-			.runAllNNs();
+			.runAllAgents();
 * getOutput(returns double)
 
-			.getOutput(int Output, int AI)
+			.getOutput(int Output, int Agent)
 * setFitness
 
-			.setFitness(float Score, int AI);
+			.setFitness(float Fitness, int Agent);
 * nextGenerationstep
 			
 			.nextGenerationstep();
@@ -53,11 +53,11 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 
 * saveAI
 
-			.saveAI(int AI);
+			.saveNN(int Agent);
 			
 * saveBestAI
 
-			.saveAI(AIEngine.getAINumberPerScoreList(0));
+			.saveNN(JNN.getAgentIDPerFitnessList(0));
 			
 # info
 
@@ -69,7 +69,7 @@ The Java version has an Example, where the black rectangle needs to eat the gree
 			.getGenerationStep()
 * getScorelist(returns float)
 
-			.getAIScorePerScoreList(int Number)
+			.getAgentFitnessPerFitnessList(int Number)
 * getAIIDforScorelist(returns int)
 
-			.getAINumberPerScoreList(int Number)
+			.getAgentIDPerFitnessList(int Number)
