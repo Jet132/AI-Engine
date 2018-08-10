@@ -4,7 +4,7 @@ AI Engine for neural networks with evolutionary training. You will need to insta
 # api
 * [Setup](#Setup)
 * [Training](#Training)
-* [save NN](#save NN)
+* [save NN](#saveNN)
 * [info](#info)
 
 # Setup
@@ -42,7 +42,7 @@ AI Engine for neural networks with evolutionary training. You will need to insta
 			
 			.nextGenerationstep();
 			
-# save NN
+# saveNN
 
 * save NN
 
